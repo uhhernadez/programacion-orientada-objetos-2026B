@@ -1,4 +1,4 @@
-# Guía de la Sesión: Repaso en Equipos (Computación Creativa)
+# Guía de la Sesión: Repaso en Equipos
 
 ## Objetivo de la Sesión
 Diseñar y programar un mini-juego funcional trabajando de forma colaborativa. Esta sesión está diseñada explícitamente utilizando el marco de la **Computación Creativa**, buscando que los estudiantes desarrollen aprendizaje en tres dimensiones:
@@ -12,7 +12,7 @@ Diseñar y programar un mini-juego funcional trabajando de forma colaborativa. E
 
 ---
 
-## Cronograma de la Sesión (Basado en Prácticas Computacionales)
+## Cronograma de la Sesión
 
 ### Fase 1: Reutilizar y Diseñar (15 minutos)
 *   **Conformación y Elección:** Formar equipos y elegir uno de los 5 retos disponibles.
@@ -34,14 +34,14 @@ Para garantizar la metacognición, cada equipo basará su exposición en este gu
 
 ---
 
-## El Panorama del Aprendizaje (Fundamento Pedagógico)
+## El Panorama del Aprendizaje
 Esta actividad ha sido estructurada combinando las teorías fundamentales del desarrollo cognitivo con los enfoques más modernos de la didáctica de la informática (*Computer Science Education*):
 
-### Los Clásicos (Las Bases del Aprendizaje)
+### Los Clásicos 
 * **Construccionismo (Seymour Papert, 1980):** Postula que aprendemos mejor "haciendo" y construyendo objetos tangibles. El código abstracto se materializa en un artefacto interactivo. *(Referencia: Papert, S. Mindstorms: Children, Computers, and Powerful Ideas).*
 * **Constructivismo Social (Lev Vygotsky, 1978):** El aprendizaje profundo ocurre en la interacción social (Zona de Desarrollo Próximo). Resolver errores complejos de código se logra más rápido negociando la lógica con los compañeros. *(Referencia: Vygotsky, L. S. Mind in Society).*
 
-### Los Enfoques Modernos (Didáctica de la Informática Actual)
+### Los Enfoques Modernos 
 * **Pensamiento Computacional (Jeannette Wing, 2006):** La meta no es aprender la sintaxis de un lenguaje, sino desarrollar habilidades universales de resolución de problemas, como la **Abstracción** (modelar Clases) y la **Descomposición** (dividir el juego en iteraciones). *(Referencia: Wing, J. M. Computational thinking).*
 * **Computación Creativa (Brennan y Resnick, MIT, 2012):** Marco que moderniza el Construccionismo. El aprendizaje se evalúa en 3 dimensiones: dominar **Conceptos**, desarrollar **Prácticas** (iterar, reutilizar código, depurar) y adoptar **Perspectivas** (conectarse con otros, explicar código y expresarse creativamente). *(Referencia: Brennan, K., & Resnick, M. New frameworks for studying and assessing the development of computational thinking).*
 * **Modelo PRIMM (Sue Sentance, 2017):** Metodología estructurada (Predict, Run, Investigate, Modify, Make). En esta sesión, los estudiantes se encuentran en la fase cumbre: **Make (Crear)**, donde aplican de forma libre y creativa todo lo investigado y modificado en las semanas previas. *(Referencia: Sentance, S., et al. PRIMM: A structured approach to teaching programming).*

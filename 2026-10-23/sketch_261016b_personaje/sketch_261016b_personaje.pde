@@ -39,6 +39,6 @@ void keyReleased() {
     teclaD = false;
   }
   if (key == 'c' || key == 'C') {
-    teclaD = false;
+    teclaC = false;
   }
 }

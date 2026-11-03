@@ -93,6 +93,7 @@ flowchart TD
 | **2026-10-16** | [2026-10-16/](file:///Users/haile/src/programacion-orientada-objetos-2026B/2026-10-16) | • `sketch_261016b_problema1` a `4`<br>• `sketch_261016b_animacion` | Taller de resolución de problemas algorítmicos y fundamentos de ciclo de frames para animación. |
 | **2026-10-20** | [2026-10-20/](file:///Users/haile/src/programacion-orientada-objetos-2026B/2026-10-20) | • `sketch_261016b_animacion`<br>• `sketch_261016b_secuencia_animacion`<br>• `sketch_261016b_animacion_movimiento` | Arquitectura de animación: clases `Imagen.pde`, `Secuencia.pde` e integración con movimiento de `Personaje.pde`. |
 | **2026-10-23** | [2026-10-23/](file:///Users/haile/src/programacion-orientada-objetos-2026B/2026-10-23) | • `sketch_261016b_personaje` | Controlador de personaje completo: máquina de estados (`enum TipoAnimacion`), transiciones idle/walk/run y scroll/escenario. |
+| **2026-10-27** | [2026-10-27/](file:///Users/haile/src/programacion-orientada-objetos-2026B/2026-10-27) | • `sketch_261016b_personaje_retos` | **Laboratorio de 4 Retos:** Flip horizontal con matrices (`scale(-1,1)`), cinemática de salto, ciclo *one-shot* de ataque y `FondoParallax`. |
 
 ---
 

@@ -1,22 +1,20 @@
 Minim minim;
+ClipAudio clip;
 ClipAudioMinim clipMinim;
+ClipAudioSound clipSound;
 void setup () {
   minim = new Minim(this);
-  clipMinim = new ClipAudioMinim(minim, "gigantedehierro.mp3");
-  clipMinim.volumen(2);
+  //clip = new ClipAudioMinim(minim, "quack.wav");
+  clip = new ClipAudioSound(this, "quack.wav");
+  clip.reproducir();
 }
-
 void draw () {
-
 }
-
 void keyPressed() {
   if (key == 'r' || key == 'R') {
-    clipMinim.reproducir();
-  }
-  
+    clip.reproducir();
+  } 
   if (key == 'p' || key == 'P') {
-    clipMinim.parar();
+    clip.parar();
   }
-  
 }

@@ -28,7 +28,14 @@ class ClipAudioMinim implements ClipAudio {
     float gain = (float)Math.log10(volumenNuevo);
     reproductor.setGain(gain);
   }
-  void reproducirUnaVez() {}
-  void reproducirEnBlucle() {}
-  void pausar (){}
+
+  void reproducirEnBlucle() {
+    reproductor.loop();
+  }
+  void pausar () {
+    if (reproductor.isPlaying()) {
+      reproductor.pause();
+      isPause = true;
+    }
+  }
 }

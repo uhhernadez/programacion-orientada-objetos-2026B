@@ -1,6 +1,7 @@
 boolean teclaA = false;
 boolean teclaD = false;
 boolean teclaC = false;
+boolean teclaEspacio = false;
 
 Personaje dog;
 Imagen fondo;
@@ -8,10 +9,11 @@ ClipAudio musicaFondo;
 
 void setup () {
   size(500, 500);
-  dog = new Personaje (200, 200);
+  dog = new Personaje (200, 200, this);
   fondo = new Imagen("fondo.png", 0, -750, 1);
-  musicaFondo= new ClipAudioSound(this,"musica_fondo.wav");
+  musicaFondo= new ClipAudioSound(this,"low_rider.mp3");
   musicaFondo.reproducirEnBlucle();
+  musicaFondo.volumen(0.2);
 }
 void draw () {
   background(124);  
@@ -31,6 +33,9 @@ void keyPressed() {
   if (key == 'c' || key == 'C') {
     teclaC = true;
   }
+  if (key == ' ') {
+    teclaEspacio = true;
+  }
 }
 
 void keyReleased() {
@@ -42,5 +47,8 @@ void keyReleased() {
   }
   if (key == 'c' || key == 'C') {
     teclaC = false;
+  }
+  if (key == ' ') {
+    teclaEspacio = false;
   }
 }

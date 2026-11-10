@@ -17,7 +17,9 @@ class ClipAudioSound implements ClipAudio {
     file.amp(volumenNuevo);
   }
   void reproducirEnBlucle() {
-    file.loop();
+    if(!file.isPlaying()) {
+      file.loop();
+    }
   }
   void pausar () {
     file.pause();

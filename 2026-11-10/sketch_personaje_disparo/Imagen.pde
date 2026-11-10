@@ -10,7 +10,7 @@ class Imagen {
     this.escala = escala;
     int alto = round(img.height * escala);
     int ancho = round(img.width * escala);
-    img.resize(alto, ancho);
+    img.resize(ancho, alto);
   }
   void mostrar () {
     imageMode(CENTER);

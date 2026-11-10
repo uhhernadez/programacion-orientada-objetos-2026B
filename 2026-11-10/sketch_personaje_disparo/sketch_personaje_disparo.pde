@@ -8,16 +8,16 @@ Imagen fondo;
 ClipAudio musicaFondo;
 
 void setup () {
-  size(500, 500);
+  size(500, 300, P2D);
   dog = new Personaje (200, 200, this);
-  fondo = new Imagen("fondo.png", 0, -750, 1);
+  fondo = new Imagen("fondo.jpg", 0, 0, 0.3);
   musicaFondo= new ClipAudioSound(this,"low_rider.mp3");
   musicaFondo.reproducirEnBlucle();
   musicaFondo.volumen(0.2);
 }
 void draw () {
-  background(124);  
-  //fondo.mostrarEquina();
+  background(125);  
+  fondo.mostrarEquina();
   dog.interacion();
   dog.mostrar();
 }

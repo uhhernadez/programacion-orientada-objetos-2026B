@@ -1,5 +1,5 @@
 enum TipoAnimacion {
-  ESPERA, CAMINAR, CORRER, SALTAR
+  ESPERA, CAMINAR, CORRER, SALTAR, DISPARAR
 };
 
 class Personaje {
@@ -66,11 +66,32 @@ class Personaje {
         saltar.mostrar(0, 0);
         saltar.actualizar();
         clipPaso.parar();
+        break;
+      }
+     case DISPARAR:
+      {
+        disparar.mostrar(0, 0);
+        disparar.actualizar();
+        if (! disparar.estaReproduciendo) {
+          actual = TipoAnimacion.CAMINAR;
+        }
       }
     }
     popMatrix();
   }
   void interacion () {
+    if (actual == TipoAnimacion.DISPARAR) {
+      return;
+    }
+    
+    if (actual == TipoAnimacion.CAMINAR) {
+      if (teclaE) {
+        actual = TipoAnimacion.DISPARAR;
+        disparar.reproducirUnaVez();
+        return;
+      }
+    }   
+      
     actual = TipoAnimacion.ESPERA;
 
     y += vy;

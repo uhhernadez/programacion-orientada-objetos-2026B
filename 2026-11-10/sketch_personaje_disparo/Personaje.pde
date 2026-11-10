@@ -7,7 +7,7 @@ class Personaje {
   boolean enSuelo;
   float x, y, vy, ySuelo;
   float gravedad;
-  TipoAnimacion actual;
+  TipoAnimacion actual, ultima;
   Animacion espera;
   Animacion caminar;
   Animacion correr;
@@ -15,6 +15,8 @@ class Personaje {
   Animacion disparar;
   ClipAudio clipSaltar;
   ClipAudio clipPaso;
+  ClipAudio clipDisparo;
+  
   Personaje (float x, float y, PApplet app) {
     mirandoDerecha = true;
     enSuelo = true;
@@ -24,6 +26,7 @@ class Personaje {
     this.y = y;
     ySuelo = y;
     actual = TipoAnimacion.CAMINAR;
+    ultima = actual;
     espera = new Animacion ("dog_cholo", "Idle", 10, x, y);
     caminar = new Animacion ("dog_cholo", "Walk", 10, x, y);
     correr = new Animacion ("dog_cholo", "Run", 8, x, y);
@@ -31,6 +34,7 @@ class Personaje {
     disparar = new Animacion("dog_cholo", "Shoot", 8, x, y);
     clipSaltar = new ClipAudioSound(app, "salto.wav");
     clipPaso = new ClipAudioSound(app, "paso.wav");
+    clipDisparo = new ClipAudioSound(app, "disparo.wav");
   }
 
   void mostrar () {
@@ -73,7 +77,7 @@ class Personaje {
         disparar.mostrar(0, 0);
         disparar.actualizar();
         if (! disparar.estaReproduciendo) {
-          actual = TipoAnimacion.CAMINAR;
+          actual = ultima;
         }
       }
     }
@@ -84,10 +88,12 @@ class Personaje {
       return;
     }
     
-    if (actual == TipoAnimacion.CAMINAR) {
+    if (actual == TipoAnimacion.CAMINAR || actual == TipoAnimacion.ESPERA) {
       if (teclaE) {
+        ultima = actual;
         actual = TipoAnimacion.DISPARAR;
         disparar.reproducirUnaVez();
+        clipDisparo.reproducir();
         return;
       }
     }   

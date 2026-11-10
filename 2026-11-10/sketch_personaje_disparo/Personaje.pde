@@ -12,6 +12,7 @@ class Personaje {
   Animacion caminar;
   Animacion correr;
   Animacion saltar;
+  Animacion disparar;
   ClipAudio clipSaltar;
   ClipAudio clipPaso;
   Personaje (float x, float y, PApplet app) {
@@ -27,6 +28,7 @@ class Personaje {
     caminar = new Animacion ("dog_cholo", "Walk", 10, x, y);
     correr = new Animacion ("dog_cholo", "Run", 8, x, y);
     saltar = new Animacion ("dog_cholo", "Jump", 8, x, y);
+    disparar = new Animacion("dog_cholo", "Shoot", 8, x, y);
     clipSaltar = new ClipAudioSound(app, "salto.wav");
     clipPaso = new ClipAudioSound(app, "paso.wav");
   }

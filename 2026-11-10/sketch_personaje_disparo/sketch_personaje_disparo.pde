@@ -6,6 +6,7 @@ boolean teclaEspacio = false;
 Personaje dog;
 Imagen fondo;
 ClipAudio musicaFondo;
+Animacion disparo;
 
 void setup () {
   size(500, 300, P2D);
@@ -14,12 +15,21 @@ void setup () {
   musicaFondo= new ClipAudioSound(this,"low_rider.mp3");
   musicaFondo.reproducirEnBlucle();
   musicaFondo.volumen(0.2);
+  disparo = new Animacion("dog_cholo", "Shoot", 8, 0, 0);
+  disparo.indice = -1;
 }
 void draw () {
   background(125);  
   fondo.mostrarEquina();
   dog.interacion();
   dog.mostrar();
+  disparo.mostrar(200,100);
+  disparo.actualizar();
+  if (keyPressed) {
+    if (key=='e') {
+      disparo.reproducirUnaVez();
+    }
+  }
 }
 
 
